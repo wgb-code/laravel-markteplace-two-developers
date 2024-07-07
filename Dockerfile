@@ -28,3 +28,7 @@ USER $user
 WORKDIR /var/www
 
 COPY docker/php/custom.ini /usr/local/etc/php/conf.d/custom.ini
+
+RUN npm install
+
+CMD [ "npm", "run", "dev" ]
