@@ -4,7 +4,6 @@ ARG user=developer
 ARG uid=1000
 
 RUN apt-get update && apt-get install -y \
-    npm\
     git \
     curl \
     libpng-dev \
@@ -26,7 +25,7 @@ RUN mkdir -p /home/$user/.composer
 
 USER $user
 
-WORKDIR /var/www/public
+WORKDIR /var/www
 
 COPY docker/php/custom.ini /usr/local/etc/php/conf.d/custom.ini
 
