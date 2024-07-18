@@ -13,8 +13,4 @@ createInertiaApp({
       .use(plugin)
       .mount(el)
   },
-  resolve: name => {
-    const pages = import.meta.glob('./Pages/**/*.vue', { eager: true })
-    return pages[`./Pages/${name}.vue`]
-  },
 })
